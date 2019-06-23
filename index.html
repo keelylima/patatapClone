@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Patatap Clone</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="/js/libs/paper-full.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+
+    function onKeyDown(event) {
+	// When a key is pressed, set the content of the text item:
+	text.content = 'The ' + event.key + ' key was pressed!';
+}
+
+    var myCircle = new Path.Circle(new Point(300, 70), 50);
+    myCircle.fillColor = 'purple';
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+
+</html>
