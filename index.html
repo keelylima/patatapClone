@@ -185,28 +185,18 @@
         }
     }
 
-    // var animatedCircle = new Path.Circle(new Point(300, 300), 100)
-    // animatedCircle.fillColor = "red";
-
-    // function onFrame() {
-    //     for(var i = 0; i < circles.length; i++) {
-    //         circles[i].fillColor.hue += 1;
-    //         circles[i].scale(.9)
-    //     }
-        // animatedCircle.fillColor.hue += 1;
 
     function onFrame(event){
         for(var i = 0; i < circles.length; i++){
             circles[i].scale(0.9);
             circles[i].fillColor.hue += 1;
             if(circles[i].area < 1){
-                circles[i].remove(); // remove the circle from the canvas
-                circles.splice(i, 1); // remove the circle from the array
+                circles[i].remove(); 
+                circles.splice(i, 1);
             }
         }
     }
 
-    }
     </script>
 </head>
 
