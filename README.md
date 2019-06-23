@@ -1,3 +1,3 @@
 # patatapClone
 
-Projeto Desenvolvido usando **paper**.js e **howler.js**
+Projeto Desenvolvido usando **paper.js** e **howler.js**
