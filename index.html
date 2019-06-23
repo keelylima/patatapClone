@@ -8,15 +8,30 @@
     <title>Patatap Clone</title>
     <link rel="stylesheet" href="/css/style.css">
     <script type="text/javascript" src="/js/libs/paper-full.js"></script>
+
     <script type="text/paperscript" canvas="myCanvas">
 
-    function onKeyDown(event) {
-	// When a key is pressed, set the content of the text item:
-	text.content = 'The ' + event.key + ' key was pressed!';
-}
+    var circles = [];
 
-    var myCircle = new Path.Circle(new Point(300, 70), 50);
-    myCircle.fillColor = 'purple';
+    function onKeyDown(event) {
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+        var newCircle = new Path.Circle(point, 500);
+        newCircle.fillColor = "orange"; 
+        circles.push(newCircle);
+    }
+
+    // var animatedCircle = new Path.Circle(new Point(300, 300), 100)
+    // animatedCircle.fillColor = "red";
+
+    function onFrame() {
+        for(var i = 0; i < circles.length; i++) {
+            circles[i].fillColor.hue += 1;
+            circles[i].scale(.9)
+        }
+        // animatedCircle.fillColor.hue += 1;
+    }
     </script>
 </head>
 
